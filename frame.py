@@ -1,5 +1,6 @@
 import datetime
 import math
+import os
 import random
 import sqlite3
 import disnake
@@ -397,4 +398,5 @@ async def donate(inter: disnake.ApplicationCommandInteraction):
 
 
 # --- ЗАПУСК БОТА ---
-bot.run(os.environ.get("BOT_TOKEN"))
+token = os.environ.get("TOKEN")
+bot.run(token)
