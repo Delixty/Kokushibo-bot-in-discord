@@ -5,7 +5,7 @@ import sqlite3
 import disnake
 from disnake.ext import commands, tasks
 
-# --- НАСТРОЙКИ БОТА И РОЛЕЙ ---
+# НАСТРОЙКИ БОТА И РОЛЕЙ 
 LEVEL_REWARDS = {
     10: ("ID")),  # ID роли "Игрок"
     20: ("ID")),  # ID роли "Стандарт"
