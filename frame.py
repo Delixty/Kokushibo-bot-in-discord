@@ -7,22 +7,22 @@ from disnake.ext import commands, tasks
 
 # --- НАСТРОЙКИ БОТА И РОЛЕЙ ---
 LEVEL_REWARDS = {
-    10: 1346774820649566218,  # ID роли "Игрок"
-    20: 1413992000792825907,  # ID роли "Стандарт"
-    35: 1413996782152585439,  # ID роли "Мастер"
-    50: 1413994074502987807,  # ID роли "Ветеран"
-    75: 1413994110515286036,  # ID роли "Элита"
-    100: 1487714941472473148  # ID роли "Легенда"
+    10: ("ID")),  # ID роли "Игрок"
+    20: ("ID")),  # ID роли "Стандарт"
+    35: ("ID")),  # ID роли "Мастер"
+    50: ("ID")),  # ID роли "Ветеран"
+    75: ("ID")),  # ID роли "Элита"
+    100: ("ID"))  # ID роли "Легенда"
 }
 
 # [ФИЧА 3] Черный список каналов (опыт в них не капает)
-IGNORE_CHANNELS = [1346785107620397086]  # Замени нули на ID АФК-войсов
+IGNORE_CHANNELS = ["ID"]  # Замени нули на ID АФК-войсов
 
 # [ФИЧА 4] Множитель опыта х2 для бустеров или VIP
-BOOSTER_ROLE_ID = 1474873472751632695  # Замени ноль на ID роли бустера/VIP
+BOOSTER_ROLE_ID = "ID"  # Замени ноль на ID роли бустера/VIP
 
 # ID канала, куда слать красивые поздравления о повышении ранга
-NOTIFICATION_CHANNEL_ID = 1346778236381696013  # Замени ноль на ID текстового канала левелапов
+NOTIFICATION_CHANNEL_ID = "ID"  # Замени ноль на ID текстового канала левелапов
 
 intents = disnake.Intents.default()
 intents.members = True
@@ -397,4 +397,4 @@ async def donate(inter: disnake.ApplicationCommandInteraction):
 
 
 # --- ЗАПУСК БОТА ---
-bot.run("MTI2NjMwNDg0NTgzMzMxMDMxMQ.GbIuYA.Xu1imus-viays4sd27UmR3muH7_wydoc6lZ7q4")
+bot.run(os.environ.get("BOT_TOKEN"))
